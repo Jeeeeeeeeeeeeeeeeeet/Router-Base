@@ -11,7 +11,9 @@ import SwiftUI
 struct Router_BaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterView {
+                ContentView()
+            }
         }
     }
 }

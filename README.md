@@ -6,3 +6,6 @@ Shout out to James on Youtube for the idea! - [Navigation in SwiftUI is Difficul
 This router makes efficient use of SwiftUI's NavigationPath and Hashable protocol.
 
 General idea is to conform your model to Hashable protocol to pass it down in the Navigation Path.
+
+![Contact](Assets/Contacts.gif)
+![DynamicRoute](Assets/DynamicRoute.gif)

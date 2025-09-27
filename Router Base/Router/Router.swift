@@ -10,24 +10,34 @@ import SwiftUI
 
 class Router: ObservableObject {
     enum Route: Hashable {
-        case contentView
+        // Dynamic Routing Example
         case view1
         case view2
         case view3
+        
+        // Contact List Example
+        case contact
+        case contactDetail(Contact)
     }
     
     @Published var path: NavigationPath = NavigationPath()
     
     @ViewBuilder func view(for route: Route) -> some View {
         switch route {
-        case .contentView:
-            ContentView()
+            
+        // Dynamic Routing
         case .view1:
             View1()
         case .view2:
             View2()
         case .view3:
             View3()
+            
+        // Contact List
+        case .contact:
+            ContactsView()
+        case let .contactDetail(contact):
+            ContactDetailsView(contact: contact)
         }
     }
     
